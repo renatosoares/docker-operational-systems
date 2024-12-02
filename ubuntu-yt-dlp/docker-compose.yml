@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+  ubuntu:
+    container_name: ubuntu
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./archives:/home/archives
+    restart: on-failure
+    command: ["sleep","infinity"]
